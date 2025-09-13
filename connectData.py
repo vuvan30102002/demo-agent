@@ -28,8 +28,3 @@ def get_connect():
         return conn
     except mysql.connector.Error as err:
         print(f"Lỗi: {err}")
-
-    finally:
-        # Đóng kết nối
-        if 'conn' in locals() and conn:
-            conn.close()
